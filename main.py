@@ -10,11 +10,11 @@ random.shuffle(dare)
 def number_of_players():
     choice = True
     while choice:
-        i = input("\nIf that's all: type 'ok'\nPlayers name: ")
+        i = input("\nTo begin just press ENTER\nPlayers name: ")
         players.append(i)
-        if i == "ok":
+        if i == "":
             choice = False
-            players.remove("ok")
+            players.remove("")
             print(f'There are {len(players)} players.')
 
 
