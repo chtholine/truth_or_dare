@@ -9,13 +9,13 @@ random.shuffle(dare)
 
 def number_of_players():
     choice = True
-    while choice:
+    while True:
         i = input("\nTo begin just press ENTER\nPlayers name: ")
         players.append(i)
-        if i == "":
-            choice = False
-            players.remove("")
-            print(f'There are {len(players)} players.')
+        if len(i) == 0:
+            players.pop(-1)
+            break
+    print(f'There are {len(players)} players.')
 
 
 def game():
