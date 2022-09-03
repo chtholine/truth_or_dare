@@ -10,7 +10,7 @@ random.shuffle(dare)
 def number_of_players():
     choice = True
     while True:
-        i = input("\nTo begin just press ENTER\nPlayers name: ")
+        i = input("\nTo begin just press ENTER\n-------------------------\nPlayers name: ")
         players.append(i)
         if len(i) == 0:
             players.pop(-1)
@@ -29,14 +29,16 @@ def game():
                 break
 
             q1 = input(f"\n{player}, truth or dare? truth/dare ").lower()
-            if not truth:
-                print("\nWe're out of truth questions")
-            elif q1 == "truth":
+            if q1 == "truth":
                 print(truth.pop(0))
-            if not dare:
-                print("\nWe're out of dare questions")
-            elif q1 == "dare":
+                if not truth:
+                    print("\nWe're out of truth questions")
+
+            if q1 == "dare":
                 print(dare.pop(0))
+                if not dare:
+                    print("\nWe're out of dare questions")
+
 
 
             q2 = input("Do you want to continue? yes/no ")
