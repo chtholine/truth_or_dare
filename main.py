@@ -13,6 +13,8 @@ if __name__ == "__main__":
                 if len(i) == 0:
                     self.players.pop(-1)
                     break
+            if len(self.players) == 0:
+                exit(At least one player is needed!)
             print(f'There are {len(self.players)} players.')
 
         def gameplay(self):
