@@ -24,27 +24,26 @@ if __name__ == "__main__":
             play = True
             while play:
                 for player in self.players:
-                    # if lists are empty: stop
                     if not truth + dare:
                         play = False
                         print("\nIt seems we're out of questions!\nThanks for playing!")
                         break
 
-                    q1 = input(f"\n{player}, truth or dare? truth/dare ").lower()
-                    if q1 == "truth":
+                    choice = input(f"\n{player}, truth or dare? truth/dare ").lower()
+                    if choice == "truth":
                         if not truth:
                             print("\nWe're out of truth questions")
                             break
                         print(truth.pop(0))
 
-                    if q1 == "dare":
+                    if choice == "dare":
                         if not dare:
                             print("\nWe're out of dare questions")
                             break
                         print(dare.pop(0))
 
-                    q2 = input("Do you want to continue? yes/no ")
-                    if q2 == 'no':
+                    continue_q = input("Do you want to continue? yes/no ")
+                    if continue_q == 'no':
                         play = False
                         print("\nThanks for playing!")
                         break
