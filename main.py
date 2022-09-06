@@ -8,9 +8,9 @@ if __name__ == "__main__":
 
         def number_of_players(self):
             while True:
-                i = input("\nTo begin just press ENTER\n-------------------------\nPlayers name: ")
-                self.players.append(i)
-                if len(i) == 0:
+                names = input("\nTo begin just press ENTER\n-------------------------\nPlayers name: ")
+                self.players.append(names)
+                if len(names) == 0:
                     self.players.pop(-1)
                     break
             if len(self.players) == 0:
