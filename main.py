@@ -44,7 +44,7 @@ if __name__ == "__main__":
                             break
                         print(dare.pop(0))
 
-                    continue_q = input("Do you want to continue? yes/no ")
+                    continue_q = input("Do you want to continue? yes/no ").lower()
                     if continue_q == 'no':
                         play = False
                         print("\nThanks for playing!")
