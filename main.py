@@ -11,9 +11,10 @@ class Game:
             self.players.append(names)
             if len(names) == 0:
                 self.players.pop(-1)
+                if len(self.players) == 0:
+                    print("At least one player is needed!")
+                    continue
                 break
-        if len(self.players) == 0:
-            exit("At least one player is needed!")
         print(f'There are {len(self.players)} players.')
 
     def gameplay(self):
@@ -29,7 +30,7 @@ class Game:
                     print("\nIt seems we're out of questions!\nThanks for playing!")
                     break
                 choice = input(f"\n{player}, truth or dare? truth/dare ").lower()
-                if choice in ['truth' or 't']:
+                if choice in ['truth', 't']:
                     if not truth:
                         print("\nWe're out of truth questions")
                         break
